@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/main.ts',
+    entry: './src/main',
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, 'dist'),
@@ -24,4 +24,7 @@ module.exports = {
             use: 'ts-loader',
         }],
     },
+    devServer: {
+      open: true
+    }
 };
